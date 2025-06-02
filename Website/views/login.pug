@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div(id="login")
+        form(id="login-form" class="frosted-panel")
+            h2 Login
+            input(type="email" required id="email" placeholder="Email")
+            input(type="password" required id="password" placeholder="Password")
+            input(type="submit" value="Login")
+            div(class="seperator")
+                a(href="/register") Register

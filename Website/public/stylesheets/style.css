@@ -1034,3 +1034,67 @@ input[type="submit"]:hover {
         flex-direction: column;
     }
 }
+
+
+/*
+    Styles: /login
+*/
+
+#login-form {
+    position: absolute;
+    padding: 20px;
+    /* font-size: 1rem; */
+    /* margin: auto; */
+    text-align: center;
+    /* height: 100%; */
+    /* flex: 1; */
+    /* height: 540px; */
+    max-width: 500px;
+
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+#login-form input[type="text"],
+#login-form input[type="email"],
+#login-form input[type="password"],
+#login-form textarea {
+    width: 100%;
+    padding: 15px;
+    /* font-size: 1.1rem; */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin: 15px 0 0 0;
+    font-size: 100%;
+}
+
+#login-form textarea {
+    height: 20ch;
+}
+
+#login-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    /* margin-top: 15px; */
+    margin: 15px 0 auto;
+    font-size: 100%;
+    /* font-size: 1.2rem; */
+    /* background-color: var(--col-secondary); */
+    background-color: rgba(var(--col-secondary-rgb), 0.4);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: var(--col-secondary);
+}
+
+#login-form .seperator {
+    margin-top: 15px;
+    border-top: 2px solid var(--col-secondary);
+    text-align: center;
+    padding-top: 15px;
+}

@@ -862,7 +862,7 @@ input[type="submit"]:hover {
         font-size: 1rem;
     }
 
-    #navbar {
+    #nav-container {
         display: none;
     }
 
@@ -1026,11 +1026,11 @@ input[type="submit"]:hover {
         font-size: 1rem;
     }
 
-    #signup-form {
+    #login-form {
         flex: 0;
     }
 
-    #signup-form > div {
+    #login-form > div {
         flex-direction: column;
     }
 }
@@ -1050,10 +1050,11 @@ input[type="submit"]:hover {
     /* flex: 1; */
     /* height: 540px; */
     max-width: 500px;
+    width: 85vw;
 
-    top: 50%;
+    top: 20%;
     left: 50%;
-    translate: -50% -50%;
+    translate: -50%;
 }
 
 #login-form input[type="text"],

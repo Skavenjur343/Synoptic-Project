@@ -1,0 +1,4 @@
+Step 1: npm install pug
+Step 2: npm install pug-cli -g
+Step 3: Under views - pug index.pug
+Final: node app.js

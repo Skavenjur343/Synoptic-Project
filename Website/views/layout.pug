@@ -1,0 +1,56 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        //- script(src="/scripts/resources.js")
+        //- script(src="scripts/persistentGlobe.js" defer)
+        //- script(src="/scripts/accessibility.js" defer)
+        //- script(src="/scripts/app.js" defer)
+        if scripts
+            each script in scripts
+                script(src = script defer)
+    body
+        //- div(id="background-globe-wrapper")
+        //-     video(id="background-globe" src="/videos/globe-spin.mp4" autoplay muted loop) 
+        div(id="nav-container" class="frosted-panel")
+            nav(id="navbar" class="")
+                a(href="/" class={ active: title == "Home"}) Home 
+                a(href="/tips" class={ active: title == "Tips" }) Tips 
+                a(href="/impact" class={ active: title == "Impact"}) Impact
+            //- a(href="/newsletter" class={ active: title == "Signup" }) Signup
+            a(href="/login" id="login" class="")
+                <i class="fa fa-user" aria-hidden="true"></i>
+        //- Hidden until lower screen size
+        div(id="burger-nav-container")
+            div(id="burger-nav" class="frosted-panel")
+                h1 #{title}
+                button(id="burger" class="burger-button")
+                    i(class="fa fa-bars")
+
+            nav(class="frosted-panel")
+                a(href="/" class={ active: title == "Home"}) Home 
+                a(href="/goals" class={ active: title == "Tips" }) Tips 
+                a(href="/team" class={ active: title == "Impact"}) Impact
+                a(href="/newsletter" class={ active: title == "Signup" }) Signup
+        main
+            block content
+        //- div(id="accessibility-panel" class="frosted-panel")
+        //-     div
+        //-         h3 Accessibility 
+        //-         button(id="accessibility-toggle")
+        //-             i(class="fa fa-chevron-up")
+        //-     div(class="accessibility-option")
+        //-         p Font Size
+        //-         div(class="accessibility-option-value")
+        //-             button(id="accessibility-fontsize-decrease") -
+        //-             p(id="accessibility-fontsize-display") 100%
+        //-             button(id="accessibility-fontsize-increase") +
+        //-             button(id="accessibility-fontsize-reset") Reset
+        //-     div(class="accessibility-option")
+        //-         p Text-To-Speech 
+        //-         div(class="accessibility-option-value")
+        //-             button(id="accessibility-tts-toggle") Select 
+        //-             button(id="accessibility-tts-read") Read Page

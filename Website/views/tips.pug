@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    section
+        h2 Our Tips 
+        div(id="tips-grid")
+            for card in data 
+                article(class="goal frosted-panel")
+                    h3 #{card.title} 
+                    p #{card.text} 
+                    img(src=card.img)

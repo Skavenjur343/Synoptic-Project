@@ -531,9 +531,9 @@ input[type="submit"]:hover {
 }
 
 /*
-    Styles: /goals
+    Styles: /tips
 */
-#goal-grid {
+#tip-grid {
     /* display: flex; */
     flex-direction: row;
     align-items: center;
@@ -546,14 +546,14 @@ input[type="submit"]:hover {
     max-width: 1200px;
 }
 
-#goal-grid .goal {
+#tip-grid .tip{
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin: 5px;
     max-width: 400px;
 }
 
-.goal {
+.tip {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
@@ -572,27 +572,28 @@ input[type="submit"]:hover {
     flex: 1;
 }
 
-.goal > h3 {
+.tip > h3 {
     line-height: 2;
     width: 100%;
     margin: 0 auto 5px auto;
-    border-bottom: 1px solid var(--col-secondary);
+    border-bottom: 2px solid var(--col-secondary);
+    border-radius: 1000px;
 }
 
-.goal > p {
+.tip > p {
     height: 4ch;
     /* flex: 1; */
     margin: 0 5px;
 }
 
-.goal > img {
+.tip > img {
     width: 100%;
     aspect-ratio: 3 / 1;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.goal > a {
+.tip > a {
     background-color: rgba(var(--col-secondary-rgb), 0.4);
     padding: 10px;
     border-radius: 10px;
@@ -606,55 +607,20 @@ input[type="submit"]:hover {
     text-decoration: none;
 }
 
-.goal > a:hover {
+.tip > a:hover {
     cursor: pointer;
     background-color: var(--col-secondary);
 }
 
-.goal:has(a:hover){
+.tip:has(a:hover){
     outline: 2px solid var(--col-secondary);
 }
 
-.goal-container {
+.tip-container {
     display: flex;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-/*
-    Styles: /goalPages
-*/
-.goal-text {
-    flex: 1;
-    min-width: 300px;
-    padding: 10px;
-    
-}
-
-.goal-image {
-    flex: 1;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-}
-
-.goal-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px black;
-    display: inline-block;
-    aspect-ratio: 10/4;
-    object-fit: cover;
-}
-
-#goalSection {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    gap: 20px;
-    margin-top: -5%;
 }
 
 /*
@@ -938,14 +904,14 @@ input[type="submit"]:hover {
         justify-content: unset;
         padding-bottom: 6em;
     }
-    #goal-grid {
+    #tip-grid {
         display: flex;
         flex-direction: column;
         /* gap: 20px; */
         align-items: center;
     }
 
-    .goal {
+    .tip{
         width: 90%;
         max-width: 500px;
     }
@@ -968,30 +934,30 @@ input[type="submit"]:hover {
         display: none;
     }
 
-    #goalSection {
+    #tipSection {
         /* padding: 10px; */
         margin-top: 0;
     }
 
-    .goal-container {
+    .tip-container {
         display: flex;
         align-items: flex-start;
         gap: 20px;
         flex-wrap: wrap;
     }
 
-    .goal-text {
+    .tip-text {
         flex: 1;
         min-width: 300px;
         max-width: 600px;
         padding: 10px;
     }
 
-    .goal-image {
+    .tip-image {
         flex: 1;
     }
 
-    .goal-image img {
+    .tip-image img {
         width: 100%;
         height: auto;
         border-radius: 10px;

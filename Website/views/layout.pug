@@ -17,6 +17,11 @@ html
                 a(href="/" class={ active: title == "Home"}) Home 
                 a(href="/tips" class={ active: title == "Tips" }) Tips 
                 a(href="/impact" class={ active: title == "Impact"}) Impact
+            div(id="lang-select")
+                a(href="javascript:setLang(0)")
+                    img(src="images/ukf.png", alt="")
+                a(href="javascript:setLang(1)")
+                    img(src="images/saf.png", alt="")
             a(href="/login" id="login" class="")
                 <i class="fa fa-user" aria-hidden="true"></i>
         //- Hidden until lower screen size
@@ -33,3 +38,5 @@ html
                 a(href="/newsletter" class={ active: title == "Signup" }) Signup
         main
             block content
+        footer 
+            p Footer stuff

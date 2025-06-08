@@ -2,11 +2,32 @@ extends layout
 
 block content
     section
-        article
-            h3 Our Problem
-            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, animi consectetur. Esse deleniti sunt officia, consequatur nam ut impedit et eum voluptates odit repellendus vitae illum eius, modi voluptatibus qui.Quasi totam et ex mollitia. Eos sunt sit eaque nam? Saepe, optio modi iusto eius voluptatibus quas vero fuga quis dolorum, et nobis nesciunt, natus exercitationem necessitatibus? Reiciendis, aliquid odio.Dolor ab eum culpa officiis fugiat, temporibus harum iste eos, quaerat veritatis cum vero voluptas. Quam cupiditate, esse quisquam animi hic autem aperiam enim eum repellat accusantium est placeat dolor?Cum laborum perspiciatis, possimus vitae qui blanditiis aut animi ducimus veniam debitis? Quas modi facilis voluptate alias vel? Amet nam alias harum corporis numquam eaque, debitis ea sit! Laboriosam, fuga!Sed laboriosam aut corrupti libero impedit, labore, tempora illo voluptatem voluptate, sint at dicta obcaecati a? Non laboriosam, quis totam hic iusto illum provident ullam unde cupiditate necessitatibus quo corporis.
-            img(src="", alt="image1")
-        article
-            h3 Our Solution
-            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam adipisci earum mollitia numquam tempora sint explicabo esse. Fugit exercitationem nesciunt placeat possimus, neque itaque. Vel consectetur incidunt aspernatur optio mollitia.Ea tenetur quibusdam nulla? Porro veritatis corrupti nesciunt, aspernatur veniam optio at officiis ipsam doloremque, tempore repellendus officia magni fugit ipsum molestias incidunt laborum? Sequi numquam est minima beatae laudantium?Aperiam laborum cumque incidunt odio quod qui? Maiores a dolorem blanditiis veniam quo vero voluptatibus unde sit laudantium beatae error voluptates quod, nobis harum quos illum. Officia quae reiciendis sed.Optio quia dolorum facere ipsam sed facilis, nihil officia laborum adipisci quibusdam aperiam beatae quas at! Deleniti molestiae minus eos eligendi non quisquam cum repudiandae nesciunt, suscipit molestias? Corrupti, ea!Dolorem quasi, tempora, nobis voluptatum aut, tempore culpa excepturi qui repellendus harum vero voluptatem quam voluptatibus numquam aspernatur autem provident placeat? Repellendus ab iste omnis recusandae molestias voluptates, modi perspiciatis!
-            img(src="", alt="image2")
+        article(id="introduction")
+            h2 Water Optimisation
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora corrupti earum porro consectetur ad voluptates neque? Minus suscipit odio iste laborum quis ab ut alias qui veritatis, adipisci necessitatibus! Eaque.Nemo odit voluptates iure autem molestias, iusto quas debitis, consequuntur voluptate fugiat exercitationem illum nostrum quam perferendis aperiam dicta mollitia consectetur placeat sequi obcaecati eaque aliquam neque assumenda quis? Mollitia.Alias quidem explicabo deserunt vitae eum voluptatibus veniam eveniet, iure ex accusamus odio exercitationem, laborum, quo ipsa natus voluptates. Tempora reiciendis recusandae fugit debitis, est dolorem ab eius laboriosam optio.
+            //- img(src="", alt="image1")
+        article(id="quick-tip" class="frosted-panel")
+            h3 Quick Tip!
+            p There's rain coming soon, so make sure to take down your tarp and let your plants enjoy it!
+        div(id="home-data")
+            div(id="metrics")
+            div(id="recommendations-panel" class="frosted-panel")
+                h3 Recommendations
+                section(id="recommendations" class="")
+                    - for (var i = 0; i < 3; i++)
+                        article(class="recommendation-card page-card")
+                            h3 Blah 
+                            p Blah 
+                            a(href="") Bleh
+        div(id="home-content")
+            section(id="problems")
+                - for (var i = 0; i < 4; i++)
+                    article(class="problem-card") 
+                        h3 problem?
+                        p bunch of yap
+                        img(src="images/water-drought.jpg")
+
+        //- article
+        //-     h2 Our Solution
+        //-     p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam adipisci earum mollitia numquam tempora sint explicabo esse. Fugit exercitationem nesciunt placeat possimus, neque itaque. Vel consectetur incidunt aspernatur optio mollitia.Ea tenetur quibusdam nulla? Porro veritatis corrupti nesciunt, aspernatur veniam optio at officiis ipsam doloremque, tempore repellendus officia magni fugit ipsum molestias incidunt laborum? Sequi numquam est minima beatae laudantium?Aperiam laborum cumque incidunt odio quod qui? Maiores a dolorem blanditiis veniam quo vero voluptatibus unde sit laudantium beatae error voluptates quod, nobis harum quos illum. Officia quae reiciendis sed.Optio quia dolorum facere ipsam sed facilis, nihil officia laborum adipisci quibusdam aperiam beatae quas at! Deleniti molestiae minus eos eligendi non quisquam cum repudiandae nesciunt, suscipit molestias? Corrupti, ea!Dolorem quasi, tempora, nobis voluptatum aut, tempore culpa excepturi qui repellendus harum vero voluptatem quam voluptatibus numquam aspernatur autem provident placeat? Repellendus ab iste omnis recusandae molestias voluptates, modi perspiciatis!
+        //-     img(src="", alt="image2")

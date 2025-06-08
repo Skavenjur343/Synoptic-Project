@@ -1,6 +1,13 @@
 extends layout
 
 block content
+    section(id="faq" class="frosted-panel")
+        h2 FAQs
+        div(id="faq-list")
+            - for(var i = 0; i < 7; i++)
+                details(class="faq-item")
+                    summary FAQ Item 
+                    p FAQ content of some kind
     section
         h2 Our Tips 
         div(id="tips-grid")

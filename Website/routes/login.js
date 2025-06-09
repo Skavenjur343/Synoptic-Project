@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const { sanitise, escape, trim, isEmail, isPassword } = require("../lib/sanitise");
-const crypt = require("../lib/crypt")
+const crypt = require("../lib/crypt");
+const { getPageLoc, getLang } = require('../lib/localization');
 
 router.get("/", function(req, res) {
     res.render("login", { 
         title: "Login",
+        loc: getPageLoc("login", getLang(req.cookies)),
         scripts: [
             "pages/login.js",
             "scripts/modal.js",

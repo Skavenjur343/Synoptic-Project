@@ -3,16 +3,16 @@ extends layout
 block content
     section
         article(id="introduction")
-            h2 Water Optimisation
+            h2 #{loc.HOME_TITLE}
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora corrupti earum porro consectetur ad voluptates neque? Minus suscipit odio iste laborum quis ab ut alias qui veritatis, adipisci necessitatibus! Eaque.Nemo odit voluptates iure autem molestias, iusto quas debitis, consequuntur voluptate fugiat exercitationem illum nostrum quam perferendis aperiam dicta mollitia consectetur placeat sequi obcaecati eaque aliquam neque assumenda quis? Mollitia.Alias quidem explicabo deserunt vitae eum voluptatibus veniam eveniet, iure ex accusamus odio exercitationem, laborum, quo ipsa natus voluptates. Tempora reiciendis recusandae fugit debitis, est dolorem ab eius laboriosam optio.
             //- img(src="", alt="image1")
         article(id="quick-tip" class="frosted-panel")
-            h3 Quick Tip!
+            h3 #{loc.TIP_TITLE}
             p There's rain coming soon, so make sure to take down your tarp and let your plants enjoy it!
         div(id="home-data")
             div(id="metrics")
             div(id="recommendations-panel" class="frosted-panel")
-                h3 Recommendations
+                h3 #{loc.RECOMMENDATIONS_TITLE}
                 section(id="recommendations" class="")
                     - for (var i = 0; i < 3; i++)
                         article(class="recommendation-card page-card")

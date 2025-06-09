@@ -5,9 +5,7 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
-        //- script(src="/scripts/resources.js")
-        //- script(src="/scripts/accessibility.js" defer)
-        //- script(src="/scripts/app.js" defer)
+        script(src="scripts/localization.js") 
         if scripts
             each script in scripts
                 script(src = script defer)
@@ -19,11 +17,11 @@ html
                 a(href="/impact" class={ active: title == "Impact"}) Impact
             div(id="lang-select")
                 a(href="javascript:setLang(0)")
-                    img(src="images/ukf.png", alt="")
+                    img(src="images/ukf.png", alt="English")
                 a(href="javascript:setLang(1)")
                     img(src="images/saf.png", alt="")
-            a(href="/login" id="login" class="")
-                <i class="fa fa-user" aria-hidden="true"></i>
+            a(href="/login" id="login" class="Afrikaans")
+                i(class="fa fa-user" aria-hidden="true")
         //- Hidden until lower screen size
         div(id="burger-nav-container")
             div(id="burger-nav" class="frosted-panel")

@@ -3,9 +3,9 @@ extends layout
 block content
     div(id="login")
         form(id="login-form" class="frosted-panel")
-            h2 Login
-            input(type="email" required id="email" placeholder="Email")
-            input(type="password" required id="password" placeholder="Password")
-            input(type="submit" value="Login")
+            h2 #{loc.LOGIN}
+            input(type="email" required id="email" placeholder=loc.EMAIL)
+            input(type="password" required id="password" placeholder=loc.PASSWORD)
+            input(type="submit" value=loc.LOGIN)
             div(class="seperator")
-                a(href="/register") Register
+                a(href="/register") #{loc.REGISTER}

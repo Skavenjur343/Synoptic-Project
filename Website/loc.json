@@ -1,0 +1,48 @@
+{
+    "pages": {
+        "home": [
+            {
+                "HOME_TITLE": "Water Optimisation",
+                "TIP_TITLE": "Quick Tip!",
+                "RECOMMENDATIONS_TITLE": "Recommendations"
+            },
+            {
+                "HOME_TITLE": "Water Optimalisering",
+                "TIP_TITLE": "Vinnige Wenk!",
+                "RECOMMENDATIONS_TITLE": "Aanbevelings"
+            }
+        ],
+        "tips": [
+            {
+                "TIPS_TITLE": "Our Tips"
+            },
+            {
+                "TIPS_TITLE": "Ons Wenke"
+            }
+        ],
+        "impact": [
+            {
+
+            },
+            {
+
+            }
+        ],
+        "login": [
+            {
+                "LOGIN": "Login",
+                "REGISTER": "Register",
+                "EMAIL": "Email",
+                "PASSWORD": "Password",
+                "CONFIRM_PASSWORD": "Confirm Password"
+            },
+            {
+                "LOGIN": "Teken in",
+                "REGISTER": "Registreer",
+                "EMAIL": "E-pos",
+                "PASSWORD": "Wagwoord",
+                "CONFIRM_PASSWORD": "Bevestig Wagwoord"
+            }
+        ]
+    }
+}

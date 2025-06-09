@@ -11,6 +11,8 @@
 * {
     box-sizing: border-box;
     scrollbar-width: thin;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -48,10 +50,11 @@ body {
     margin: 0;
     color: white;
     /* padding: 50px; */
-    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    /* font-family: "Lucida Grande", Helvetica, Arial, sans-serif; */
 
     /* background: linear-gradient(135deg, var(--col-primary), var(--col-secondary)); */
-    background: linear-gradient(100deg, var(--col-primary), var(--col-secondary));
+    /* background: linear-gradient(100deg, var(--col-primary), var(--col-secondary)); */
+    background: linear-gradient(135deg, var(--col-primary), 70%, white);
 
     /* background-; */
     background-color: black;
@@ -467,7 +470,7 @@ input[type="submit"]:hover {
     overflow: hidden;
     height: 300px;
     padding-left: 20px;
-    background-image: linear-gradient(130deg, rgba(0, 0, 0, 1), 80%, transparent);
+    background-image: linear-gradient(130deg, rgba(var(--col-secondary-rgb), 0.8), 80%, transparent);
     border-radius: 10px;
     max-width: 900px;
     /* min-width: 600px; */
@@ -725,7 +728,7 @@ input[type="submit"]:hover {
             background-color: rgba(var(--col-secondary-rgb), .2);
         }
 
-        &[open] > summary::after {
+        &[open] > summary > i {
             transform: rotate(90deg);
         }
 
@@ -733,8 +736,8 @@ input[type="submit"]:hover {
             list-style: none;
             position: relative;
             /* padding-left: ; */
-            &::after {
-                content: '⯆'; /* Closed state arrow */
+            & > i {
+                /* content: '⯆'; Closed state arrow */
                 position: absolute;
                 right: 0;
                 top: 0;

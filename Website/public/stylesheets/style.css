@@ -1062,11 +1062,12 @@ input[type="submit"]:hover {
     #burger-nav-container {
         display: block;
         width: 100%;
-        position: absolute;
-        /* left: 0px;
-        right: 0px; */
-        top: 10px;
-        width: calc(100% - 10px);
+        position: fixed;
+        /* left: 5px; */
+        /* right: 0px; */ 
+        /* top: 10px; */
+        /* width: calc(100% - 10px); */
+        width: 100%;
         height: 5em;
         /* padding: 10px; */
         z-index: 1;
@@ -1078,6 +1079,7 @@ input[type="submit"]:hover {
         flex-direction: row;
         justify-content: space-between;
         padding: 10px;
+        border-radius: 0px;
     }
 
     #burger-nav h1 {
@@ -1101,9 +1103,9 @@ input[type="submit"]:hover {
 
     #burger-nav-container>nav {
         display: none;
-        margin-top: 2px;
+        /* margin-top: 2px; */
         background: rgba(0, 0, 0, 0.5);
-        /* border-radius: 20px; */
+        border-radius: 0px;
         padding: 10px;
     }
 
@@ -1123,6 +1125,21 @@ input[type="submit"]:hover {
 
     #burger-nav-container .active {
         background-color: var(--col-secondary);
+    }
+
+    #burger-lang-select {
+        display: flex;
+        flex-direction: row;
+
+        & > a {
+            /* margin: none; */
+            /* padding: 5px; */
+            padding-right: 0px;
+            & > img {
+                max-width: 2.5em !important;
+        
+            }
+        }
     }
 
     main {

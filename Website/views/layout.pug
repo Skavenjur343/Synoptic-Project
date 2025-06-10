@@ -5,7 +5,8 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
-        script(src="scripts/localization.js") 
+        script(src="scripts/localization.js")
+        script(src="scripts/app.js" defer)
         if scripts
             each script in scripts
                 script(src = script defer)
@@ -29,11 +30,19 @@ html
                 button(id="burger" class="burger-button")
                     i(class="fa fa-bars")
 
-            nav(class="frosted-panel")
-                a(href="/" class={ active: title == "Home"}) Home 
-                a(href="/goals" class={ active: title == "Tips" }) Tips 
-                a(href="/team" class={ active: title == "Impact"}) Impact
-                a(href="/newsletter" class={ active: title == "Signup" }) Signup
+            nav(class="frosted-panel open")
+                a(href="/" class={ active: title == "Home" }) Home 
+                a(href="/tips" class={ active: title == "Tips" }) Tips 
+                a(href="/impact" class={ active: title == "Impact" }) Impact
+                a(href="/register" class={ active: title == "Register" }) Register
+                a(href="/login" class={ active: title == "Login" }) Login 
+                div(id="burger-lang-select")
+                    a(href="javascript:setLang(0)")
+                        img(src="images/ukf.png", alt="English")
+                    a(href="javascript:setLang(1)")
+                        img(src="images/saf.png", alt="")
+
+                    
         main
             block content
         footer 

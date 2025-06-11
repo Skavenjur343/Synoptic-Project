@@ -553,28 +553,30 @@ input[type="submit"]:hover {
         align-items: center;
         justify-content: space-between;
 
-    select {
-        /* background-color: rgba(255, 255, 255, 0.1); */
-        /* background-color: transparent; */
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        /* color: white; */
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        min-width: 140px;
-        outline: none;
-        appearance: none;
-        color-scheme: dark;
-    }
+        & select {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* background-color: transparent; */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            min-width: 140px;
+            outline: none;
 
+            & option {
+                background-color: var(--col-primary);
+                border-radius: 0;
+            }
+        }
 
-        label {
+        & label {
             color: white;
             font-weight: bold;
             margin-right: 5px;
         }
 
-        .filter-group {
+        & .filter-group {
             display: flex;
             align-items: center;
             gap: 5px;

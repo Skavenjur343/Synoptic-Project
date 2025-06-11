@@ -29,24 +29,24 @@ block content
             div(id="metrics" class="frosted-panel")
                 h2 Plants
                 div(id="plant-filter")
+                    div(class="filter-group")
+                        label(for="type-filter") Type:
+                        select(id="type-filter")
+                            option(value="") All
+                            - const types = [...new Set(metrics.plants.map(p => p.type))]
+                            each type in types
+                                option(value=type)= type
+                    div(class="filter-group")
+                        label(for="season-filter") Season:
+                        select(id="season-filter")
+                            option(value="") All
+                            - const seasons = [...new Set(metrics.plants.map(p => p.season))]
+                            each season in seasons
+                                option(value=season)= season
+
                 div(class="plants-metrics")
                     each plant in metrics.plants
-                        article(class="plant-card")
-                            h4= plant.name
-                            p= plant.type
-                            button(
-                            type="button"
-                            onclick=`showPlantModal(${JSON.stringify({
-                                name: plant.name,
-                                scientific_name: plant.scientific_name,
-                                description: plant.description,
-                                season: plant.season,
-                                environmental: metrics.environmental_requirements.find(e => e.plant_id === plant.plant_id),
-                                tips: metrics.gardening_tips.filter(t => t.plant_id === plant.plant_id)
-                            })})`
-                            ) More Info
-                    each plant in metrics.plants
-                        article(class="plant-card")
+                        article(class="plant-card" data-type=plant.type data-season=plant.season)
                             h4= plant.name
                             p= plant.type
                             button(
@@ -75,24 +75,23 @@ block content
                     h2 #{loc.PROBLEM_TITLE}
                     p #{loc.PROBLEM_TEXT}
                     img(src="images/water-drought.jpg")
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+            const typeFilter = document.getElementById("type-filter");
+            const seasonFilter = document.getElementById("season-filter");
+            const cards = document.querySelectorAll(".plant-card");
 
-//- script.
-//-     function showPlantModal(data) {
-//-         const text = `
-//-             <strong>Scientific Name:</strong> ${data.scientific_name}<br>
-//-             <strong>Description:</strong> ${data.description}<br>
-//-             <strong>Season:</strong> ${data.season}<br>
-//-             <strong>Environment:</strong> ${Object.entries(data.environmental || {}).map(([key, val]) => `${key}: ${val}`).join(", ")}<br>
-//-             <strong>Tips:</strong>
-//-             <ul>${data.tips.map(tip => `<li>${tip.tip}</li>`).join("")}</ul>
-//-         `;
+            function filterCards() {
+                const typeVal = typeFilter.value;
+                const seasonVal = seasonFilter.value;
 
-//-         const modal = new Modal({
-//-             type: "info",
-//-             title: `About ${data.scientific_name}`,
-//-             text: text,
-//-             image: ""
-//-         });
+                cards.forEach(card => {
+                    const matchType = !typeVal || card.dataset.type === typeVal;
+                    const matchSeason = !seasonVal || card.dataset.season === seasonVal;
+                    card.style.display = (matchType && matchSeason) ? "" : "none";
+                });
+            }
 
-//-         modal.Show();
-//-     }
+            typeFilter.addEventListener("change", filterCards);
+            seasonFilter.addEventListener("change", filterCards);
+        });

@@ -8,6 +8,7 @@ router.get("/", function(req, res) {
         loc: getPageLoc("home", getLang(req.cookies)),
         metrics: require("../tmp_data.json"),
         scripts: [
+            "pages/index.js",
             "scripts/modal.js"
         ]
     });

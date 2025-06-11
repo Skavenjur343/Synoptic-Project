@@ -7,7 +7,12 @@ const { getPageLoc, getLang } = require('../lib/localization');
 router.get("/", function(req, res) {
     res.render("register", { 
         title: "Register",
-        loc: getPageLoc("login", getLang(req.cookies))
+        loc: getPageLoc("login", getLang(req.cookies)),
+        scripts: [
+            "pages/register.js",
+            "scripts/validation.js",
+            "scripts/modal.js"
+        ]
     });
 });
 

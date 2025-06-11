@@ -17,11 +17,12 @@ html
                 a(href="/tips" class={ active: title == "Tips" }) #{loc.common.NAV_TIPS} 
                 a(href="/impact" class={ active: title == "Impact"}) #{loc.common.NAV_IMPACT}
             div(id="lang-select")
-                a(href="javascript:setLang(0)")
-                    img(src="images/ukf.png", alt="English")
-                a(href="javascript:setLang(1)")
-                    img(src="images/saf.png", alt="")
-            a(href="/login" id="login" class="Afrikaans")
+                div
+                    a(href="javascript:setLang(0)")
+                        img(src="images/ukf.png", alt="English")
+                    a(href="javascript:setLang(1)")
+                        img(src="images/saf.png", alt="Afrikaans")
+            a(href="/login" id="login")
                 i(class="fa fa-user" aria-hidden="true")
         //- Hidden until lower screen size
         div(id="burger-nav-container")

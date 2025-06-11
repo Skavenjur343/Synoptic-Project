@@ -43,6 +43,7 @@ form.addEventListener("submit", (e) => {
     })
     .then(async res => {
         const res_json = await res.json()
+        console.log(res.ok)
         if (!res.ok) {
             new Modal({
                 type: "error",
@@ -51,6 +52,13 @@ form.addEventListener("submit", (e) => {
             }).Show()
 
             return
+        }
+        else {            
+            new Modal({
+                type: "info",
+                title: "Login",
+                text: "Login successful!"
+            }).Show()
         }
     })
     .catch(e => {

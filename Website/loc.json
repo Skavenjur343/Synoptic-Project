@@ -7,14 +7,14 @@
                 "img": "images/recs/tomato.jpg"
             },
             {
-                "label": "Tomatoes",
-                "text": "This commonly mistaken vegetable is great for planting in the summer and works well with Johannesburg's hot temperatures. It loves the sun and blooms best with lots of exposure. Tomatoes are widely used in many dishes and are very common in Mediterranean and Middle Eastern cuisine such as pizza, many pasta sauces, Spanish gazpacho, and used in many curries.",
-                "img": "images/recs/tomato.jpg"
+                "label": "Spinach",
+                "text": "Spinach is best planted in the winter when there are less options to grow, but it works great in cuisine. It can be eaten raw, in salads, and cooked in soups, curries, or casseroles. Dishes with spinach as a main ingredient include spinach salad, spinach soup, spinach dip, saag paneer, pkhali, ispanakhi matsvnit, and spanakopita.",
+                "img": "images/recs/spinach.jpg"
             },
             {
-                "label": "Tomatoes",
-                "text": "This commonly mistaken vegetable is great for planting in the summer and works well with Johannesburg's hot temperatures. It loves the sun and blooms best with lots of exposure. Tomatoes are widely used in many dishes and are very common in Mediterranean and Middle Eastern cuisine such as pizza, many pasta sauces, Spanish gazpacho, and used in many curries.",
-                "img": "images/recs/tomato.jpg"
+                "label": "Aloe Vera",
+                "text": "Aloe vera is considered one oof the top plants as it can be grown year-round and is very low maintenance as well as easy for beginners. Known for its medicinal properties, the gel is commonly used in topical medicines and gels, and the latex can relieve constipation. In terms of food, the gel is sometimes used in yoghurts, beverages, and desserts. However, some people are allergic to the gel and at high or prolonged doses of the latex is toxic, so we recommend small amounts.",
+                "img": "images/recs/aloe.jpg"
             }
         ],
         [
@@ -24,14 +24,14 @@
                 "img": "images/recs/tomato.jpg"
             },
             {
-                "label": "Tamaties",
-                "text": "Hierdie verkeerde groente is ideaal om in die somer te plant en werk goed met die warm temperatuur van Johannesburg. Dit hou van die son en blom die beste met baie blootstelling. Tamaties word wyd in baie geregte gebruik en kom baie voor in die Middellandse See en Midde -Oosterse kookkuns soos pizza, baie pastasous, Spaanse gazpacho, en word in baie kerries gebruik.",
-                "img": "images/recs/tomato.jpg"
+                "label": "Spinasie",
+                "text": "Spinasie word die beste in die winter geplant as daar minder opsies is om te groei, maar dit werk goed in kombuis. Dit kan rou geëet word, in slaaie en in sop, kerries of braaiplekke gekook word. Geregte met spinasie as 'n hoofbestanddeel sluit spinasie -slaai, spinasie -sop, spinasie -dip, Saag -paneer, Pkhali, Ispanakhi Matsvnit en Spanakopita in.",
+                "img": "images/recs/spinach.jpg"
             },
             {
-                "label": "Tamaties",
-                "text": "Hierdie verkeerde groente is ideaal om in die somer te plant en werk goed met die warm temperatuur van Johannesburg. Dit hou van die son en blom die beste met baie blootstelling. Tamaties word wyd in baie geregte gebruik en kom baie voor in die Middellandse See en Midde -Oosterse kookkuns soos pizza, baie pastasous, Spaanse gazpacho, en word in baie kerries gebruik.",
-                "img": "images/recs/tomato.jpg"
+                "label": "Aloe Vera",
+                "text": "Aloe Vera word beskou as een van die top plante, aangesien dit die hele jaar deur gekweek kan word en baie lae onderhoud en maklik vir beginners is. Bekend vir sy medisinale eienskappe, Die gel word gereeld in aktuele medisyne en gels gebruik, en die lateks kan hardlywigheid verlig. Wat voedsel betref, word die gel soms in jogurt, drank en nageregte gebruik. Sommige mense is egter allergies vir die gel en by hoë of langdurige dosisse van die lateks is giftig, daarom beveel ons klein hoeveelhede aan.",
+                "img": "images/recs/aloe.jpg"
             }
         ]
     ],
@@ -39,18 +39,20 @@
         {
             "NAV_HOME": "Home",
             "NAV_TIPS": "Tips",
-            "NAV_IMPACT": "Impact",
+            "NAV_IMPACT": "About",
             "NAV_REGISTER": "Register",
             "NAV_LOGIN": "Login",
-            "FOOTER_TEXT": "For more information, contact: someone@example.com"
+            "FOOTER_TEXT": "For more information, contact: someone@example.com",
+            "IMPACT": "Impact"
         },
         {
             "NAV_HOME": "Tuisblad",
             "NAV_TIPS": "Wenke",
-            "NAV_IMPACT": "Impak",
+            "NAV_IMPACT": "Oor",
             "NAV_REGISTER": "Registreer",
             "NAV_LOGIN": "Teken in",
-            "FOOTER_TEXT": "Vir meer inligting kontak: someone@example.com"
+            "FOOTER_TEXT": "Vir meer inligting kontak: someone@example.com",
+            "IMPACT": "Impak"
         }
     ],
     "pages": {
@@ -79,20 +81,43 @@
         "tips": [
             {
                 "TITLE": "Tips",
-                "TIPS_TITLE": "Our Tips"
+                "TIPS_TITLE": "Our Tips",
+                "FAQ": [
+                    { "label": "What are the benefits of local gardening?", "text": "Increased access to healthy and fresh food. Local gardens can help reduce food waste, improve air and water quality, and promote biodiversity. Finally, lower costs when going food shopping." },
+                    { "label": "What if I don't know some of the metrics?", "text": "That's completely fine. You can leave some areas blank, and it will still give you a suitable suggestion." },
+                    { "label": "What can I do about the pests?", "text": "Our best solution is netting but spraying insecticide can work as well. When it is especially sunny, covering your plants helps keep the water in and the pests out." }
+                ],
+                "TIPS": [
+                    { "title": "Lower shower time!", "text": "Reducing how much time you spend in the shower can be Litres of difference. You can soak, turn the water off. The lather, and the rinse to save water." },
+                    { "title": "Less flushing water!", "text": "It may sound crazy, but placing an item such as a brick in your cistern can reduce how much water is used when flushing. Alternatively, if you have a smart flush system, using the smaller flush button can save on your water bill." },
+                    { "title": "Water collection!", "text": "Collecting rainwater is a great way to collect water FOR FREE. If you keep your gutters clean, you can redirect the water into tanks and use it for yourself." }
+                
+                ]
             },
             {
                 "TITLE": "Wenke",
-                "TIPS_TITLE": "Ons Wenke"
+                "TIPS_TITLE": "Ons Wenke",
+                "FAQ": [
+                    { "label": "Vrae Wat is die voordele van plaaslike tuinmaak?", "text": "Verhoogde toegang tot gesonde en vars kos. Plaaslike tuine kan help om voedselafval te verminder, lug- en watergehalte te verbeter en biodiversiteit te bevorder. Laas uiteindelik die koste as u kos gaan inkopies doen." },
+                    { "label": "Wat as ek nie sommige van die statistieke ken nie?", "text": "Dit is heeltemal goed. U kan sommige gebiede leeg laat, en dit sal u steeds 'n geskikte voorstel gee." },
+                    { "label": "Wat kan ek aan die plae doen?", "text": "Ons beste oplossing is netwerk, maar die spuit van insekdoders kan ook werk. As dit veral sonnig is, help u plante om die water in te hou en die plae uit." }
+                ],
+                "TIPS": [
+                    { "title": "Ons wenke Laer storttyd!", "text": "Die vermindering van hoeveel tyd u in die stort spandeer, kan liter van verskil wees. U kan week, die water afskakel. Die skommel, en die spoel om water te bespaar." },
+                    { "title": "Minder spoelwater!", "text": "Dit klink miskien mal, maar as u 'n item soos 'n baksteen in u spoelbak plaas, kan dit verminder hoeveel water gebruik word as u spoel. Alternatiewelik, As u 'n slim spoelstelsel het, kan u die kleiner spoelknoppie op u waterrekening bespaar." },
+                    { "title": "Waterversameling!", "text": "Die versameling van reënwater is 'n goeie manier om water gratis te versamel. As u u geute skoon hou, kan u die water in tenks herlei en dit self gebruik." }
+                ]
             }
         ],
         "impact": [
             {
-                "TITLE": "Impact",
+                "TITLE": "About",
+                "TEXT": "Saving water offers numerous benefits, including reducing energy consumption, saving money, and protecting the environment. By conserving water, you can lower energy bills, reduce the amount of water and wastewater treatment costs, and help preserve natural habitats. Not to mention it can aid in preventing the severe droughts and climate crises such as Day 0 in Cape Town. Using less water lowers the energy needed to treat, pump, and heat water, reducing energy demand and potentially lowering carbon emissions. Reducing water waste can contribute to a larger global effort to conserve resources and combat climate change. Even small changes can add up to a massive impact to stop climate change and move to a more sustainable future.",
                 "TEAM_TITLE": "Meet The Team"
             },
             {
-                "TITLE": "Impak",
+                "TITLE": "Oor",
+                "TEXT": "Die besparing van water bied talle voordele, insluitend die vermindering van energieverbruik, die besparing van geld en die beskerming van die omgewing. Deur water te bespaar, kan jy energierekeninge verlaag, die hoeveelheid water- en afvalwaterbehandelingskoste verminder en help om natuurlike habitatte te bewaar. Om nie te praat van die feit dat dit kan help om die ernstige droogtes en klimaatkrisisse soos Dag 0 in Kaapstad te voorkom nie. Die gebruik van minder water verlaag die energie wat nodig is om water te behandel, te pomp en te verhit, wat die energievraag verminder en moontlik koolstofvrystellings verlaag. Die vermindering van watervermorsing kan bydra tot 'n groter wêreldwye poging om hulpbronne te bespaar en klimaatsverandering te bestry. Selfs klein veranderinge kan 'n massiewe impak tot gevolg hê om klimaatsverandering te stop en na 'n meer volhoubare toekoms te beweeg.",
                 "TEAM_TITLE": "Ontmoet Die Span"
             }
         ],

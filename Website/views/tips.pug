@@ -4,16 +4,16 @@ block content
     section(id="faq" class="frosted-panel")
         h2 FAQs
         div(id="faq-list")
-            - for(var i = 0; i < 7; i++)
+            //- - for(var i = 0; i < 7; i++)
+            for item in loc.FAQ
                 details(class="faq-item")
-                    summary FAQ Item 
+                    summary #{item.label}
                         i(class="fas fa-chevron-down")  
-                    p FAQ content of some kind
+                    p #{item.text}
     section
         h2 #{loc.TIPS_TITLE}
         div(id="tips-grid")
-            for card in data 
+            for card in loc.TIPS 
                 article(class="tip frosted-panel")
                     h3 #{card.title} 
                     p #{card.text} 
-                    img(src=card.img)

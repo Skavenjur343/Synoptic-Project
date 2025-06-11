@@ -32,6 +32,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    console.log(password.value, confirm_password.value)
     if (password.value != confirm_password.value) {
         inputError(confirm_password)
 
@@ -40,6 +41,8 @@ form.addEventListener("submit", (e) => {
             title: "Error",
             text: "Passwords don't match!"
         }).Show()
+
+        return
     }
 
     fetch("/register", {

@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
     const hashed_pass = crypt.hashSync(sanitised.password)
     console.log(sanitised.email, sanitised.password, hashed_pass)
     console.log(crypt.compareSync(sanitised.password, hashed_pass))
-    res.status(200).send();
+    res.status(200).send({});
 })
 
 module.exports = {

@@ -16,12 +16,14 @@ html
                 a(href="/" class={ active: title == "Home"}) #{loc.common.NAV_HOME} 
                 a(href="/tips" class={ active: title == "Tips" }) #{loc.common.NAV_TIPS} 
                 a(href="/impact" class={ active: title == "Impact"}) #{loc.common.NAV_IMPACT}
-            div(id="lang-select")
+            button(id="lang-select" popovertarget="lang-dropdown")
                 div
-                    a(href="javascript:setLang(0)")
-                        img(src="images/ukf.png", alt="English")
-                    a(href="javascript:setLang(1)")
-                        img(src="images/saf.png", alt="Afrikaans")
+                    a(href="javascript:void(0)")
+                        img(src=loc.common.LANG_FLAG, alt="Select Language")
+                    //- span EN
+                    i(class="fas fa-chevron-down")  
+                    //- a(href="javascript:setLang(1)")
+                    //-     img(src="images/saf.png", alt="Afrikaans")
             a(href="/login" id="login")
                 i(class="fa fa-user" aria-hidden="true")
         //- Hidden until lower screen size
@@ -43,6 +45,13 @@ html
                     a(href="javascript:setLang(1)")
                         img(src="images/saf.png", alt="")
 
+        div(id="lang-dropdown" class="frosted-panel" popover)
+            a(href="javascript:setLang(0)" class="lang")
+                img(src="images/ukf.png", alt="English")
+                p English
+            a(href="javascript:setLang(1)" class="lang")
+                img(src="images/saf.png", alt="Afrikaans")
+                p Afrikaans
                     
         main
             block content

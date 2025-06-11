@@ -37,6 +37,7 @@
     ],
     "common": [
         {
+            "LANG_FLAG": "images/ukf.png",
             "NAV_HOME": "Home",
             "NAV_TIPS": "Tips",
             "NAV_IMPACT": "About",
@@ -46,6 +47,7 @@
             "IMPACT": "Impact"
         },
         {
+            "LANG_FLAG": "images/saf.png",
             "NAV_HOME": "Tuisblad",
             "NAV_TIPS": "Wenke",
             "NAV_IMPACT": "Oor",

@@ -4,30 +4,95 @@ block content
     section
         article(id="introduction")
             h2 #{loc.HOME_TITLE}
-            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora corrupti earum porro consectetur ad voluptates neque? Minus suscipit odio iste laborum quis ab ut alias qui veritatis, adipisci necessitatibus! Eaque.Nemo odit voluptates iure autem molestias, iusto quas debitis, consequuntur voluptate fugiat exercitationem illum nostrum quam perferendis aperiam dicta mollitia consectetur placeat sequi obcaecati eaque aliquam neque assumenda quis? Mollitia.Alias quidem explicabo deserunt vitae eum voluptatibus veniam eveniet, iure ex accusamus odio exercitationem, laborum, quo ipsa natus voluptates. Tempora reiciendis recusandae fugit debitis, est dolorem ab eius laboriosam optio.
+            p #{loc.HOME_INTRO}
             //- img(src="", alt="image1")
         article(id="quick-tip" class="frosted-panel")
             h3 #{loc.TIP_TITLE}
-            p There's rain coming soon, so make sure to take down your tarp and let your plants enjoy it!
+            p #{loc.TIP_TEXT}
+        div(class="climate-summary frosted-panel")
+            h3 Climate - Makers Valley
+            table
+                thead
+                    tr
+                        th Month
+                        th Avg Temp (°C)
+                        th Rainfall (mm)
+                        th Sunlight (hrs)
+                tbody
+                    each data in metrics.climate_data
+                        tr
+                            td= data.month
+                            td= data.avg_temp_c
+                            td= data.avg_rain_mm
+                            td= data.sunlight_hrs
         div(id="home-data")
-            div(id="metrics")
+            div(id="metrics" class="frosted-panel")
+                h2 Plants
+                div(id="plant-filter")
+                div(class="plants-metrics")
+                    each plant in metrics.plants
+                        article(class="plant-card")
+                            h4= plant.name
+                            p= plant.type
+                            button(
+                            type="button"
+                            onclick=`showPlantModal(${JSON.stringify({
+                                name: plant.name,
+                                scientific_name: plant.scientific_name,
+                                description: plant.description,
+                                season: plant.season,
+                                environmental: metrics.environmental_requirements.find(e => e.plant_id === plant.plant_id),
+                                tips: metrics.gardening_tips.filter(t => t.plant_id === plant.plant_id)
+                            })})`
+                            ) More Info
+                    each plant in metrics.plants
+                        article(class="plant-card")
+                            h4= plant.name
+                            p= plant.type
+                            button(
+                            type="button"
+                            onclick=`showPlantModal(${JSON.stringify({
+                                name: plant.name,
+                                scientific_name: plant.scientific_name,
+                                description: plant.description,
+                                season: plant.season,
+                                environmental: metrics.environmental_requirements.find(e => e.plant_id === plant.plant_id),
+                                tips: metrics.gardening_tips.filter(t => t.plant_id === plant.plant_id)
+                            })})`
+                            ) More Info
+
             div(id="recommendations-panel" class="frosted-panel")
-                h3 #{loc.RECOMMENDATIONS_TITLE}
+                h2 #{loc.RECOMMENDATIONS_TITLE}
                 section(id="recommendations" class="")
                     - for (var i = 0; i < 3; i++)
                         article(class="recommendation-card page-card")
-                            h3 Blah 
-                            p Blah 
-                            a(href="") Bleh
+                            h3 #{loc.recs[i].label}
+                            p #{loc.recs[i].text}
+                            img(src=loc.recs[i].img)
         div(id="home-content")
             section(id="problems")
-                - for (var i = 0; i < 4; i++)
-                    article(class="problem-card") 
-                        h3 problem?
-                        p bunch of yap
-                        img(src="images/water-drought.jpg")
+                article(class="problem-card")
+                    h2 #{loc.PROBLEM_TITLE}
+                    p #{loc.PROBLEM_TEXT}
+                    img(src="images/water-drought.jpg")
 
-        //- article
-        //-     h2 Our Solution
-        //-     p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam adipisci earum mollitia numquam tempora sint explicabo esse. Fugit exercitationem nesciunt placeat possimus, neque itaque. Vel consectetur incidunt aspernatur optio mollitia.Ea tenetur quibusdam nulla? Porro veritatis corrupti nesciunt, aspernatur veniam optio at officiis ipsam doloremque, tempore repellendus officia magni fugit ipsum molestias incidunt laborum? Sequi numquam est minima beatae laudantium?Aperiam laborum cumque incidunt odio quod qui? Maiores a dolorem blanditiis veniam quo vero voluptatibus unde sit laudantium beatae error voluptates quod, nobis harum quos illum. Officia quae reiciendis sed.Optio quia dolorum facere ipsam sed facilis, nihil officia laborum adipisci quibusdam aperiam beatae quas at! Deleniti molestiae minus eos eligendi non quisquam cum repudiandae nesciunt, suscipit molestias? Corrupti, ea!Dolorem quasi, tempora, nobis voluptatum aut, tempore culpa excepturi qui repellendus harum vero voluptatem quam voluptatibus numquam aspernatur autem provident placeat? Repellendus ab iste omnis recusandae molestias voluptates, modi perspiciatis!
-        //-     img(src="", alt="image2")
+//- script.
+//-     function showPlantModal(data) {
+//-         const text = `
+//-             <strong>Scientific Name:</strong> ${data.scientific_name}<br>
+//-             <strong>Description:</strong> ${data.description}<br>
+//-             <strong>Season:</strong> ${data.season}<br>
+//-             <strong>Environment:</strong> ${Object.entries(data.environmental || {}).map(([key, val]) => `${key}: ${val}`).join(", ")}<br>
+//-             <strong>Tips:</strong>
+//-             <ul>${data.tips.map(tip => `<li>${tip.tip}</li>`).join("")}</ul>
+//-         `;
+
+//-         const modal = new Modal({
+//-             type: "info",
+//-             title: `About ${data.scientific_name}`,
+//-             text: text,
+//-             image: ""
+//-         });
+
+//-         modal.Show();
+//-     }

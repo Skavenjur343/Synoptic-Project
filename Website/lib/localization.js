@@ -24,7 +24,11 @@ function getPageLoc(page, lang) {
         return Localization.pages[page][0]
     }
 
-    return Localization.pages[page][lang]
+    var loc = Localization.pages[page][lang];
+    loc.common = Localization.common[lang];
+    loc.recs = Localization.recommendations[lang]
+
+    return loc;
 }
 
 module.exports = {

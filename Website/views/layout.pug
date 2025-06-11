@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title= title
+        title #{loc.TITLE}
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
@@ -13,9 +13,9 @@ html
     body
         div(id="nav-container" class="frosted-panel")
             nav(id="navbar" class="")
-                a(href="/" class={ active: title == "Home"}) Home 
-                a(href="/tips" class={ active: title == "Tips" }) Tips 
-                a(href="/impact" class={ active: title == "Impact"}) Impact
+                a(href="/" class={ active: title == "Home"}) #{loc.common.NAV_HOME} 
+                a(href="/tips" class={ active: title == "Tips" }) #{loc.common.NAV_TIPS} 
+                a(href="/impact" class={ active: title == "Impact"}) #{loc.common.NAV_IMPACT}
             div(id="lang-select")
                 a(href="javascript:setLang(0)")
                     img(src="images/ukf.png", alt="English")
@@ -26,16 +26,16 @@ html
         //- Hidden until lower screen size
         div(id="burger-nav-container")
             div(id="burger-nav" class="frosted-panel")
-                h1 #{title}
+                h1 #{loc.TITLE}
                 button(id="burger" class="burger-button")
                     i(class="fa fa-bars")
 
-            nav(class="frosted-panel open")
-                a(href="/" class={ active: title == "Home" }) Home 
-                a(href="/tips" class={ active: title == "Tips" }) Tips 
-                a(href="/impact" class={ active: title == "Impact" }) Impact
-                a(href="/register" class={ active: title == "Register" }) Register
-                a(href="/login" class={ active: title == "Login" }) Login 
+            nav(class="frosted-panel")
+                a(href="/" class={ active: title == "Home" }) #{loc.common.NAV_HOME} 
+                a(href="/tips" class={ active: title == "Tips" }) #{loc.common.NAV_TIPS} 
+                a(href="/impact" class={ active: title == "Impact" }) #{loc.common.NAV_IMPACT}
+                a(href="/register" class={ active: title == "Register" }) #{loc.common.NAV_REGISTER}
+                a(href="/login" class={ active: title == "Login" }) #{loc.common.NAV_LOGIN}
                 div(id="burger-lang-select")
                     a(href="javascript:setLang(0)")
                         img(src="images/ukf.png", alt="English")
@@ -46,4 +46,9 @@ html
         main
             block content
         footer 
-            p Footer stuff
+            a(href="/") #{loc.common.NAV_HOME} 
+            a(href="/tips") #{loc.common.NAV_TIPS} 
+            a(href="/impact") #{loc.common.NAV_IMPACT}
+            a(href="/register") #{loc.common.NAV_REGISTER}
+            a(href="/login") #{loc.common.NAV_LOGIN}
+            p #{loc.common.FOOTER_TEXT}

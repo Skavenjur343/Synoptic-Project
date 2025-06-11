@@ -100,10 +100,14 @@ footer {
     /* margin-top: 20px; */
     padding: 10px;
     height: 100px;
+
+    & > a {
+        margin: 10px;
+    }
 }
 
 footer p {
-    margin: 0;
+    margin: 10px;
 }
 
 /*
@@ -250,19 +254,32 @@ input[type="submit"]:hover {
 }
 
 #modal-panel {
+    z-index: 3;
     box-sizing: border-box;
     position: absolute;
     min-width: 350px;
+    scrollbar-width: none;
     /* min-height: 300px; */
     text-align: center;
     padding: 20px;
     /* background: linear-gradient(135deg, var(--col-primary), var(--col-secondary)); */
     /* backdrop-filter: brightness(50%); */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     backdrop-filter: blur(20px);
     box-shadow:
         0px -12px 24px rgba(0, 0, 0, 0.5),
         0px 16px 32px rgba(0, 0, 0, 0.7),
         0px 8px 16px rgba(0, 0, 0, 0.4);
+
+    & ul {
+        margin: 0;
+        padding: 0;
+    }
+    & li {
+        list-style: none;
+    }
 }
 
 #modal-panel[modal-type="image"] {
@@ -271,6 +288,7 @@ input[type="submit"]:hover {
 }
 
 #modal-bg {
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
@@ -308,10 +326,12 @@ input[type="submit"]:hover {
     display: none;
 }
 
-#modal-panel p {
+#modal-panel > p {
     /* height: 60%; */
     overflow-y: scroll;
-    margin: 30px 10px;
+    margin: 10px 10px;
+    padding: 0 10px;
+    scrollbar-width: none;
 }
 
 #modal-panel button {
@@ -450,7 +470,7 @@ input[type="submit"]:hover {
     /* height: 100%; */
 }
 
-#home-content #problems {
+#problems {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -463,7 +483,7 @@ input[type="submit"]:hover {
     /* outline: 1px solid blue; */
 }
 
-#home-content #problems .problem-card {
+#problems .problem-card {
     position: relative;
     text-align: left;
     width: 100%;
@@ -501,26 +521,78 @@ input[type="submit"]:hover {
     width: 97vw;
     margin: 20px auto;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center
 }
 
 #home-data #metrics {
     flex: 1 0 300px;
     min-width: 300px;
-    max-width: 980px;
-    aspect-ratio: 16 / 8;
-    outline: 1px solid red;
+    max-width: 900px;
+    min-height: 600px;
+    max-height: 600px;
+    box-shadow: none;
+    /* aspect-ratio: 16 / 8; */
+    /* outline: 1px solid red; */
     position: relative;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    /* & >  */
+
+    & > .plants-metrics {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));     
+        overflow-y: scroll;
+        gap: 10px;
+        max-height: calc(100% - 10em);
+        & > .plant-card {
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 5px;
+
+            & > button {
+                width: 100%;
+            }
+        }
+    }
 }
 
-#metrics::after {
-    content: 'Metrics';
+.climate-summary {
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    border-left: 4px solid var(--col-primary);
+    border-right: 4px solid var(--col-secondary);
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: none;
+    & > table {
+        padding: 0px 10px 10px 10px;
+        width: 100%;
+        & > tbody > tr > td {
+            border: 1px solid white;
+        }
+    }
+}
+
+#plant-filter {
+    position: relative;
+    height: 5em;
+    width: 100%;
+    outline: 1px solid red;
+    margin-bottom: 5px;
+}
+
+#plant-filter::after {
+    content: 'Filter Options';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.5rem;
     color: red;
+    /* outline: 1px solid red; */
 }
 
 #home-data #recommendations {
@@ -536,10 +608,15 @@ input[type="submit"]:hover {
     outline: 1px solid white;
     border-radius: 10px;
     width: 100%;
-    max-width: 240px;
-    height: 400px;
+    max-width: 265px;
+    /* height: 400px; */
     background: #22222260;
     margin: auto;
+
+    & > img {
+        border-radius: 10px;
+        outline: 1px solid white
+    }
 }
 
 #home-data #recommendations-panel {
@@ -548,7 +625,7 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
   gap: 15px; */
     /* justify-content: center; */
-    max-width: 850px;
+    max-width: 900px;
     width: 786px;
     box-shadow: none;
     /* min-width: 786px; */
@@ -662,7 +739,7 @@ input[type="submit"]:hover {
 #team-grid .team-member {
     width: 17.5rem;
     height: auto;
-    min-height: 30rem;
+    min-height: 10rem;
     text-align: center;
     overflow: hidden;
     padding: 20px;
@@ -849,6 +926,15 @@ input[type="submit"]:hover {
     gap: 20px;
     flex-wrap: wrap;
 }
+
+/*
+    Styles: /impact
+*/
+#impact {
+    margin: 0 10px;
+}
+
+#impact #team 
 
 /*
     Styles: /newsletter

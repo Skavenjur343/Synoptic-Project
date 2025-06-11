@@ -2,4 +2,33 @@ extends layout
 
 block content
     //- Not sure what exactly we want here?
-    h3 Impact
+    //- h Impact
+    div(id="impact")
+        section(id="problems")
+            article(class="problem-card") 
+                h3 Stuff
+                p Words
+                img(src="images/water-drought.jpg")
+        section(id="team")
+            h2 #{loc.TEAM_TITLE}
+            div(id="team-grid")
+                div(class="team-member frosted-panel") 
+                    img(src="images/tmp.jpg", alt="Team Member Image", srcset="")
+                    h3 Leroy D'eath
+                    p he/him
+                div(class="team-member frosted-panel") 
+                    img(src="images/tmp.jpg", alt="Team Member Image", srcset="")
+                    h3 Matthew Liebenberg
+                    p he/him
+                div(class="team-member frosted-panel") 
+                    img(src="images/tmp.jpg", alt="Team Member Image", srcset="")
+                    h3 Keelan Reddings
+                    p he/him
+                div(class="team-member frosted-panel") 
+                    img(src="images/tmp.jpg", alt="Team Member Image", srcset="")
+                    h3 Alex Tran
+                    p he/him
+                div(class="team-member frosted-panel") 
+                    img(src="images/tmp.jpg", alt="Team Member Image", srcset="")
+                    h3 Eric Draghici
+                    p he/him

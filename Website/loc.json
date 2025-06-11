@@ -1,35 +1,104 @@
 {
+    "recommendations": [
+        [
+            {
+                "label": "Tomatoes",
+                "text": "This commonly mistaken vegetable is great for planting in the summer and works well with Johannesburg's hot temperatures. It loves the sun and blooms best with lots of exposure. Tomatoes are widely used in many dishes and are very common in Mediterranean and Middle Eastern cuisine such as pizza, many pasta sauces, Spanish gazpacho, and used in many curries.",
+                "img": "images/recs/tomato.jpg"
+            },
+            {
+                "label": "Tomatoes",
+                "text": "This commonly mistaken vegetable is great for planting in the summer and works well with Johannesburg's hot temperatures. It loves the sun and blooms best with lots of exposure. Tomatoes are widely used in many dishes and are very common in Mediterranean and Middle Eastern cuisine such as pizza, many pasta sauces, Spanish gazpacho, and used in many curries.",
+                "img": "images/recs/tomato.jpg"
+            },
+            {
+                "label": "Tomatoes",
+                "text": "This commonly mistaken vegetable is great for planting in the summer and works well with Johannesburg's hot temperatures. It loves the sun and blooms best with lots of exposure. Tomatoes are widely used in many dishes and are very common in Mediterranean and Middle Eastern cuisine such as pizza, many pasta sauces, Spanish gazpacho, and used in many curries.",
+                "img": "images/recs/tomato.jpg"
+            }
+        ],
+        [
+            {
+                "label": "Tamaties",
+                "text": "Hierdie verkeerde groente is ideaal om in die somer te plant en werk goed met die warm temperatuur van Johannesburg. Dit hou van die son en blom die beste met baie blootstelling. Tamaties word wyd in baie geregte gebruik en kom baie voor in die Middellandse See en Midde -Oosterse kookkuns soos pizza, baie pastasous, Spaanse gazpacho, en word in baie kerries gebruik.",
+                "img": "images/recs/tomato.jpg"
+            },
+            {
+                "label": "Tamaties",
+                "text": "Hierdie verkeerde groente is ideaal om in die somer te plant en werk goed met die warm temperatuur van Johannesburg. Dit hou van die son en blom die beste met baie blootstelling. Tamaties word wyd in baie geregte gebruik en kom baie voor in die Middellandse See en Midde -Oosterse kookkuns soos pizza, baie pastasous, Spaanse gazpacho, en word in baie kerries gebruik.",
+                "img": "images/recs/tomato.jpg"
+            },
+            {
+                "label": "Tamaties",
+                "text": "Hierdie verkeerde groente is ideaal om in die somer te plant en werk goed met die warm temperatuur van Johannesburg. Dit hou van die son en blom die beste met baie blootstelling. Tamaties word wyd in baie geregte gebruik en kom baie voor in die Middellandse See en Midde -Oosterse kookkuns soos pizza, baie pastasous, Spaanse gazpacho, en word in baie kerries gebruik.",
+                "img": "images/recs/tomato.jpg"
+            }
+        ]
+    ],
+    "common": [
+        {
+            "NAV_HOME": "Home",
+            "NAV_TIPS": "Tips",
+            "NAV_IMPACT": "Impact",
+            "NAV_REGISTER": "Register",
+            "NAV_LOGIN": "Login",
+            "FOOTER_TEXT": "For more information, contact: someone@example.com"
+        },
+        {
+            "NAV_HOME": "Tuisblad",
+            "NAV_TIPS": "Wenke",
+            "NAV_IMPACT": "Impak",
+            "NAV_REGISTER": "Registreer",
+            "NAV_LOGIN": "Teken in",
+            "FOOTER_TEXT": "Vir meer inligting kontak: someone@example.com"
+        }
+    ],
     "pages": {
         "home": [
             {
-                "HOME_TITLE": "Water Optimisation",
+                "TITLE": "Home",
+                "HOME_TITLE": "WEPCO",
+                "HOME_INTRO": "55% of water in Johannesburg is lost due to theft and poor infrastructure. With our new farming solution, YOU can get the best out of your water.  If you're planning or already own a small garden, we have a perfect starting point. Our filter takes into account local variables to provide the best crop for the job. You just need to input the correct metrics for your home, and it gives you a recommendation backed by our own data from local farmers also in the area. It's that simple so why not try it for yourself?",
                 "TIP_TITLE": "Quick Tip!",
-                "RECOMMENDATIONS_TITLE": "Recommendations"
+                "TIP_TEXT": "There's rain coming soon, so make sure to take down your tarp and let your plants enjoy it!",
+                "RECOMMENDATIONS_TITLE": "Recommendations",
+                "PROBLEM_TITLE": "Our Solution",
+                "PROBLEM_TEXT": "There is a major water crisis in Johannesburg in that it is the largest city in the world which cannot sustain itself on its own water supply. Water is used from Lesotho via the Van Daal Damn and the Hartbeespoort damn to supply the city. With Cape Town coming close to Day Zero and the harsh summer in 2024 for the Johannesburg area, water consumption needs to be reduced to avoid these catastrophes. Enter WEPCO, the Water Efficiency Program for Crop Optimisation. Household and commercial farming can become more cost and water efficient by choosing the right plants for the job. Locally gathered data is used in projecting the weather and is used in our database to know which crops and when to plant them."
             },
             {
-                "HOME_TITLE": "Water Optimalisering",
+                "TITLE": "Tuisblad",
+                "HOME_TITLE": "WEPCO",
+                "HOME_INTRO": "55% van die water in Johannesburg gaan verlore weens diefstal en swak infrastruktuur. Met ons nuwe boerdery oplossing kan u die beste uit u water haal. As u van plan is of reeds 'n klein tuin besit, het ons 'n perfekte beginpunt. Ons filter neem plaaslike veranderlikes in ag om die beste oes vir die werk te bied. U hoef net die regte statistieke vir u huis in te voer, en dit gee u 'n aanbeveling wat ondersteun word deur ons eie data van plaaslike boere ook in die omgewing. Dit is so eenvoudig, so waarom probeer dit nie self nie?",
                 "TIP_TITLE": "Vinnige Wenk!",
-                "RECOMMENDATIONS_TITLE": "Aanbevelings"
+                "TIP_TEXT": "Daar kom binnekort reën, Maak dus seker dat u u teil afneem en laat u plante dit geniet!",
+                "RECOMMENDATIONS_TITLE": "Aanbevelings",
+                "PROBLEM_TITLE": "Ons Oplossing",
+                "PROBLEM_TEXT": "Daar is 'n groot water krisis in Johannesburg deurdat dit die grootste stad ter wêreld is wat homself nie op sy eie watervoorsiening kan onderhou nie. Water word vanaf Lesotho via die Van Daal Dam en die Hartbeespoort Dam gebruik om die stad te voorsien. Met Kaapstad wat naby Day Zero kom en die harde somer in 2024 vir die Johannesburgse omgewing, Waterverbruik moet verminder word om hierdie rampe te vermy. Voer WEPCO in, die wateroptimaliseringsprogram vir gewas optimalisering. Huishoudelike en kommersiële boerdery kan meer koste en water doeltreffend raak deur die regte aanlegte vir die werk te kies. Plaaslik versamelde data word gebruik om die weer te projekteer en word in ons databasis gebruik om te weet watter gewasse en wanneer om dit te plant."
             }
         ],
         "tips": [
             {
+                "TITLE": "Tips",
                 "TIPS_TITLE": "Our Tips"
             },
             {
+                "TITLE": "Wenke",
                 "TIPS_TITLE": "Ons Wenke"
             }
         ],
         "impact": [
             {
-
+                "TITLE": "Impact",
+                "TEAM_TITLE": "Meet The Team"
             },
             {
-
+                "TITLE": "Impak",
+                "TEAM_TITLE": "Ontmoet Die Span"
             }
         ],
         "login": [
             {
+                "TITLE": "Account",
                 "LOGIN": "Login",
                 "REGISTER": "Register",
                 "EMAIL": "Email",
@@ -37,6 +106,7 @@
                 "CONFIRM_PASSWORD": "Confirm Password"
             },
             {
+                "TITLE": "Rekening",
                 "LOGIN": "Teken in",
                 "REGISTER": "Registreer",
                 "EMAIL": "E-pos",

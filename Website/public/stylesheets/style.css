@@ -451,7 +451,7 @@ input[type="submit"]:hover {
         /* border-top: 1px solid white; */
         /* border-bottom: 1px solid white; */
         /* border-radius: 10px; */
-        padding: 5px 10px;
+        padding: 10px;
         vertical-align: middle;
         display: flex;
         flex-direction: row;
@@ -472,7 +472,7 @@ input[type="submit"]:hover {
     position: fixed;
     position-anchor: --lang-anchor;
     top: anchor(bottom);
-    margin-top: 5px;
+    margin-top: 10px;
     right: anchor(right);
     margin-right: 10px;
     border-radius: 10px;
@@ -1385,6 +1385,7 @@ input[type="submit"]:hover {
         left: anchor(right);
         right: unset;
         top: anchor(top);
+        margin-top: 0;
     }
 
     main {

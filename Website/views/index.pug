@@ -46,7 +46,7 @@ block content
                             - const seasons = [...new Set(metrics.plants.map(p => p.season))]
                             each season in seasons
                                 option(value=season)= season
-
+ 
                 div(class="plants-metrics")
                     each plant in metrics.plants
                         article(class="plant-card" data-type=plant.type data-season=plant.season)

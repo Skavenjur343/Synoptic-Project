@@ -5,3 +5,9 @@ burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("active")
     burgerMenu.classList.toggle("open")
 })
+
+function setLang(lang) {
+    console.log(lang)
+    document.cookie = "lang=" + lang;
+    window.location.reload()
+}

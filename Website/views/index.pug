@@ -66,9 +66,9 @@ block content
                 section(id="recommendations" class="")
                     - for (var i = 0; i < 3; i++)
                         article(class="recommendation-card page-card")
-                            h3 #{loc.recs[i].label}
-                            p #{loc.recs[i].text}
-                            img(src=loc.recs[i].img)
+                            h3 #{recs[i].label}
+                            p #{recs[i].text}
+                            img(src=recs[i].img)
         div(id="home-content")
             section(id="problems")
                 article(class="problem-card")

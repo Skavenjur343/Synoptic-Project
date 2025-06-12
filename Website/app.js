@@ -13,6 +13,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// middleware setup
 app.use(cookieParser());
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,7 +24,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routes_path = path.join(__dirname, "routes");
 fs.readdirSync(routes_path).forEach((route_file) => {
     if (!route_file.endsWith(".js")) return;
-    const { router_path, router } = require(path.join(routes_path, route_file));
+    try {
+        var { router_path, router } = require(path.join(routes_path, route_file));
+    }
+    catch {
+        console.error("Invalid route: " + route_file)
+        return
+    }
+
     console.log(`Route - ${router_path}`);
     if (!router_path || !router) {
         console.error(`Invalid route ${route_file}`);

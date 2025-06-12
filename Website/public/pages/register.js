@@ -8,6 +8,7 @@ const confirm_password = document.querySelector("#confirm-password")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
+    // Ensure email is valid
     if (!Validate.Email(email.value)) {
         inputError(email)
 
@@ -20,6 +21,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    // Ensure password is valid
     if (!Validate.Password(password.value)) {
         inputError(password)
 
@@ -32,6 +34,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    // Ensure passwords match
     console.log(password.value, confirm_password.value)
     if (password.value != confirm_password.value) {
         inputError(confirm_password)
@@ -45,6 +48,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    // Send register request
     fetch("/register", {
         method: "POST",
         headers: {

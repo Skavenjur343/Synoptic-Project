@@ -26,7 +26,7 @@ function getPageLoc(page, lang) {
 
     var loc = Localization.pages[page][lang];
     loc.common = Localization.common[lang];
-    loc.recs = Localization.recommendations[lang]
+    // loc.recs = Localization.recommendations[lang]
 
     return loc;
 }

@@ -5,7 +5,6 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
-        script(src="scripts/localization.js")
         script(src="scripts/app.js" defer)
         if scripts
             each script in scripts
@@ -16,14 +15,11 @@ html
                 a(href="/" class={ active: title == "Home"}) #{loc.common.NAV_HOME} 
                 a(href="/tips" class={ active: title == "Tips" }) #{loc.common.NAV_TIPS} 
                 a(href="/impact" class={ active: title == "Impact"}) #{loc.common.NAV_IMPACT}
-            button(id="lang-select" popovertarget="lang-dropdown")
-                div
+            div(id="lang-select")
+                button(popovertarget="lang-dropdown")
                     a(href="javascript:void(0)")
                         img(src=loc.common.LANG_FLAG, alt="Select Language")
-                    //- span EN
                     i(class="fas fa-chevron-down")  
-                    //- a(href="javascript:setLang(1)")
-                    //-     img(src="images/saf.png", alt="Afrikaans")
             a(href="/login" id="login")
                 i(class="fa fa-user" aria-hidden="true")
 
@@ -42,10 +38,9 @@ html
                 a(href="/login" class={ active: title == "Login" }) #{loc.common.NAV_LOGIN}
                 button(id="lang-select" popovertarget="lang-dropdown")
                     div
-                        a(href="javascript:void(0)")
+                        a()
                             img(src=loc.common.LANG_FLAG, alt="Select Language")
-                        //- span EN
-                        i(class="fas fa-chevron-down")  
+                        i(class="fas fa-chevron-down")
 
         div(id="lang-dropdown" class="frosted-panel" popover)
             a(href="javascript:setLang(0)" class="lang")

@@ -6,7 +6,6 @@ const { getPageLoc, getLang } = require("../lib/localization")
 router.get("/", function(req, res) {
     res.render("tips", { 
         title: "Tips",
-        data: getDatabase().getTips(),
         loc: getPageLoc("tips", getLang(req.cookies))
     });
 });

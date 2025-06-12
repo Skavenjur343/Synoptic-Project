@@ -10,6 +10,7 @@ class Modal {
     #title = ""
     #text = ""
     #image = ""
+    #on_close = undefined
 
     /**
      * @typedef {Object} ModalOptions
@@ -17,6 +18,7 @@ class Modal {
      * @property {string} title
      * @property {string} text
      * @property {string} image
+     * @property {function} on_close
      */
 
     /**
@@ -28,12 +30,14 @@ class Modal {
         this.#title = opts.title
         this.#text = opts.text
         this.#image = opts.image
+        this.#on_close = opts.on_close
 
         if (!this.#FindPanel()) {
             this.#CreatePanel()
         }
     }
 
+    //  Attempt to find an existing modal panel to prevent duplication
     #FindPanel() {
         let panel = document.querySelector("#modal-panel")
         let background = document.querySelector("#modal-bg")
@@ -51,6 +55,7 @@ class Modal {
         return true
     }
 
+    // Create the modal panel elements
     #CreatePanel() {
         let panel = document.createElement("div")
         panel.id = "modal-panel"
@@ -104,5 +109,9 @@ class Modal {
     Hide() {
         this.#modal_panel.setAttribute("hidden", "")
         this.#modal_bg.setAttribute("hidden", "")
+
+        if (this.#on_close && typeof this.#on_close == "function") {
+            this.#on_close()
+        }
     }
 }

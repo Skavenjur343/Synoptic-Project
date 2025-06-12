@@ -20,9 +20,7 @@ function formatEnvironmental(env) {
     `;
 }
 
-
 function showPlantModal(data) {
-    delete data.environmental.plant_id
     console.log(JSON.stringify(data.environmental))
     const environmentalDetails = formatEnvironmental(data.environmental);
 
@@ -43,7 +41,6 @@ function showPlantModal(data) {
         <u><h4>Gardening Tips</h4></u>
         <ul>${tipsList}</ul>
     `;
-
 
     const modal = new Modal({
         type: "info",

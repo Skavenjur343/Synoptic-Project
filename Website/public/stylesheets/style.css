@@ -16,22 +16,6 @@
 }
 
 /*
-    Hover effect when TTS Select has been enabled
-*/
-.tts-select p:hover,
-.tts-select h1:hover,
-.tts-select h2:hover,
-.tts-select h3:hover,
-.tts-select a:hover {
-    outline: 1px solid yellow !important;
-}
-
-.tts-select div:hover:not(:has(:hover)) {
-    outline: 1px solid yellow !important;
-}
-
-
-/*
     Default Styles
 */
 html,
@@ -110,9 +94,6 @@ footer p {
     margin: 10px;
 }
 
-/*
-    Text sizings to support the font size accessibility feature
-*/
 h1 {
     font-size: 2rem
 }
@@ -182,63 +163,6 @@ button:hover {
 input[type="submit"]:hover {
     cursor: pointer;
     background-color: var(--col-secondary);
-}
-
-.outline-text {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-/*
-    Styles: Background Globe
-*/
-#background-globe-wrapper {
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    /* animation: fadeInOpacity 1s ease-out; */
-    opacity: 1;
-    /* Use background image of first frame the video loading is a bit smoother*/
-    /* background-image: url("/images/globe-spin.jpg"); */
-}
-
-#background-globe-wrapper::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-image: radial-gradient(circle,
-            #00000000,
-            rgba(11, 39, 65, 0.32) 50%,
-            rgba(var(--col-primary-rgb), .2));
-}
-
-#background-globe {
-    /* Increase brightness a lil bit */
-    filter: brightness(1.4);
-    min-height: 100%;
-    min-width: 100%;
-
-    height: auto;
-    width: auto;
-}
-
-@keyframes fadeInOpacity {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
 }
 
 /*
@@ -435,18 +359,15 @@ input[type="submit"]:hover {
     align-content: center;
     /* border: 1px solid white; */
 
-    background: none;
-    outline: none;
-    backdrop-filter: none;
-    box-shadow: none;
-    border: none;
+
 
     &:hover {
         background-color: transparent;
     }
 
 
-    & > div {
+    & > button {
+        cursor: pointer;
         /* border: 1px solid white; */
         /* border-top: 1px solid white; */
         /* border-bottom: 1px solid white; */
@@ -459,6 +380,13 @@ input[type="submit"]:hover {
         justify-content: center;
         gap: 5px;
         border-radius: 10px;
+
+        background: none;
+        outline: none;
+        backdrop-filter: none;
+        box-shadow: none;
+        border: none;
+        /* cursor: default; */
         /* outlinw-right: 1px solid white; */
 
         &:hover {
@@ -848,86 +776,6 @@ input[type="submit"]:hover {
 }
 
 /*
-.page-card:has(a:hover){
-    outline: 2px solid var(--col-secondary);
-    
-} */
-/* 
-.page-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; 
-
-    min-width: 13rem;
-    width: 19rem;
-    /* width: 13rem; 
-    height: auto;
-    aspect-ratio: 1.4;
-    padding: 15px 20px;
-    vertical-align: middle;
-    user-select: none;
-} */
-
-/*
-    Styles: /team
-*/
-#team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    /* padding: 20px; */
-    align-items: flex-start;
-}
-
-#team-grid .team-member {
-    width: 17.5rem;
-    height: auto;
-    min-height: 18rem;
-    text-align: center;
-    overflow: hidden;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-#team-grid .team-member img {
-    width: 128px;
-    height: 128px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-
-
-/* #team-grid .team-member:hover img {
-    transform: scale(1.1);
-} */
-
-
-#team-grid .team-member h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-    color: white;
-    border-bottom: 1px solid var(--col-secondary);
-}
-
-
-#team-grid .team-member p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: white;
-}
-
-/*
     Styles: /tips
 */
 #faq {
@@ -1079,182 +927,59 @@ input[type="submit"]:hover {
     margin: 0 10px;
 }
 
-#impact #team 
-
-/*
-    Styles: /newsletter
-*/
-
-#signup-form {
-    padding: 20px;
-    /* font-size: 1rem; */
-    margin: auto;
-    text-align: center;
-    /* height: 100%; */
-    flex: 1;
-    /* height: 540px; */
-}
-
-#signup-form input[type="text"],
-#signup-form input[type="email"],
-#signup-form textarea {
-    width: 100%;
-    padding: 15px;
-    /* font-size: 1.1rem; */
-    margin-bottom: 15px;
-    border-radius: 10px;
-    margin: 15px 0 0 0;
-    font-size: 100%;
-}
-
-#signup-form textarea {
-    height: 20ch;
-}
-
-#signup-form>div {
+#team-grid {
     display: flex;
-    gap: 5px;
-}
-
-#signup-form input[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    /* margin-top: 15px; */
-    margin: 15px 0 auto;
-    font-size: 100%;
-    /* font-size: 1.2rem; */
-    /* background-color: var(--col-secondary); */
-    background-color: rgba(var(--col-secondary-rgb), 0.4);
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    /* transition: background-color 0.3s ease; */
-}
-
-#signup-form input[type="submit"]:hover {
-    background-color: var(--col-secondary);
-}
-
-#signup-form #first-name,
-#signup-form #last-name {
-    display: inline;
-    flex: 1;
-}
-
-#newsletter {
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
-    max-width: 1000px;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    height: 80%;
+    /* padding: 20px; */
+    align-items: flex-start;
 }
 
-#recent-news {
-    flex: 1;
-    /* height: 100%; */
-    overflow-y: scroll;
-    max-width: 400px;
-    padding: 5px;
-    max-height: 545px;
-    margin: auto;
+#team-grid .team-member {
+    width: 17.5rem;
+    height: auto;
+    min-height: 18rem;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#recent-news>h2 {
-    width: max-content;
-    margin: 15px auto;
+
+#team-grid .team-member img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* #team-grid .team-member:hover img {
+    transform: scale(1.1);
+} */
+
+
+#team-grid .team-member h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: white;
     border-bottom: 1px solid var(--col-secondary);
 }
 
-#recent-news>.news-card {
-    width: 100%;
-    aspect-ratio: 3 / 1;
 
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; */
-    /* width: 13rem; */
-    height: auto;
-    padding: 15px 20px;
-    vertical-align: middle;
-    user-select: none;
-}
-
-
-@media (max-width: 900px) {
-    #signup-form {
-        flex: 0;
-    }
-
-    #newsletter {
-        flex-direction: column;
-        max-width: 600px;
-        height: unset;
-    }
-
-    #recent-news {
-        max-width: unset;
-        width: 100%;
-    }
-}
-
-/*
-    Styles: Accessibility Panel
-*/
-#accessibility-panel {
-    position: absolute;
-    right: 10px;
-    /* bottom: -120px; */
-    height: fit-content;
-    width: fit-content;
-    padding: 8px 15px;
-    z-index: 1;
-    transition: all .5s ease;
-}
-
-#accessibility-panel.open {
-    bottom: 0 !important;
-}
-
-
-#accessibility-panel>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2px 0;
-}
-
-#accessibility-panel>div>h3 {
-    margin: 2px 0;
-}
-
-/* #accessibility-panel > div > #accessibility-toggle {
-    display: none;
-} */
-
-.accessibility-option {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-}
-
-.accessibility-option-value {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    float: right;
-    align-items: center;
-}
-
-.accessibility-option-value>button {
-    /* width: 1rem; */
-    min-width: 3rem;
-    max-height: 2.5rem;
-    /* scale: .8; */
+#team-grid .team-member p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: white;
 }
 
 /* 

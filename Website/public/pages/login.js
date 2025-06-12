@@ -7,6 +7,7 @@ const password = document.querySelector("#password")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
+    // Ensure the email is valid
     if (!Validate.Email(email.value)) {
         inputError(email)
 
@@ -19,6 +20,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    // Ensure the password is valid
     if (!Validate.Password(password.value)) {
         inputError(password)
 
@@ -31,6 +33,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
+    // Send login request
     fetch("/login", {
         method: "POST",
         headers: {

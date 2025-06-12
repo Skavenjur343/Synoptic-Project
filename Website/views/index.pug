@@ -5,19 +5,18 @@ block content
         article(id="introduction")
             h2 #{loc.HOME_TITLE}
             p #{loc.HOME_INTRO}
-            //- img(src="", alt="image1")
         article(id="quick-tip" class="frosted-panel")
             h3 #{loc.TIP_TITLE}
             p #{loc.TIP_TEXT}
         div(class="climate-summary frosted-panel")
-            h3 Climate - Makers Valley
+            h3 #{loc.CLIMATE_TITLE}
             table
                 thead
                     tr
-                        th Month
-                        th Avg Temp (°C)
-                        th Rainfall (mm)
-                        th Sunlight (hrs)
+                        th #{loc.MONTH}
+                        th #{loc.AVG_TEMP}
+                        th #{loc.RAINFALL}
+                        th #{loc.SUNLIGHT}
                 tbody
                     each data in metrics.climate_data
                         tr
@@ -25,21 +24,25 @@ block content
                             td= data.avg_temp_c
                             td= data.avg_rain_mm
                             td= data.sunlight_hrs
+
         div(id="home-data")
             div(id="metrics" class="frosted-panel")
-                h2 Plants
+                h2 #{loc.PLANTS}
                 div(id="plant-filter")
                     div(class="filter-group")
-                        label(for="type-filter") Type:
+                        label(for="type-filter") #{loc.TYPE}
                         select(id="type-filter")
-                            option(value="") All
+                            option(value="") #{loc.ALL}
+                            //- Generate a list of all unique plant types for filtering
                             - const types = [...new Set(metrics.plants.map(p => p.type))]
                             each type in types
                                 option(value=type)= type
+
                     div(class="filter-group")
-                        label(for="season-filter") Season:
+                        label(for="season-filter") #{loc.SEASON}
                         select(id="season-filter")
-                            option(value="") All
+                            option(value="") #{loc.ALL}
+                            //- Generate a list of all unique seasons for filtering
                             - const seasons = [...new Set(metrics.plants.map(p => p.season))]
                             each season in seasons
                                 option(value=season)= season
@@ -69,6 +72,7 @@ block content
                             h3 #{recs[i].label}
                             p #{recs[i].text}
                             img(src=recs[i].img)
+                            
         div(id="home-content")
             section(id="problems")
                 article(class="problem-card")

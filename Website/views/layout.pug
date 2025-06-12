@@ -36,12 +36,13 @@ html
                 a(href="/impact" class={ active: title == "Impact" }) #{loc.common.NAV_IMPACT}
                 a(href="/register" class={ active: title == "Register" }) #{loc.common.NAV_REGISTER}
                 a(href="/login" class={ active: title == "Login" }) #{loc.common.NAV_LOGIN}
-                button(id="lang-select" popovertarget="lang-dropdown")
-                    div
+                div(id="lang-select")
+                    button(popovertarget="lang-dropdown")
                         a()
                             img(src=loc.common.LANG_FLAG, alt="Select Language")
                         i(class="fas fa-chevron-down")
 
+        //- Popover panel for language selection
         div(id="lang-dropdown" class="frosted-panel" popover)
             a(href="javascript:setLang(0)" class="lang")
                 img(src="images/ukf.png", alt="English")
